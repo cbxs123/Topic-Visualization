@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit">
+
+    <title>关键字提取</title>
+
+    <!--[if lt IE 9]>
+    <meta http-equiv="refresh" content="0;ie.html"/>
+    <![endif]-->
+
+    <link href="css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="css/font-awesome.min.css?v=4.4.0" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/build.css" rel="stylesheet">
+    <link href="css/style.css?v=4.1.0" rel="stylesheet">
+
+    <!--设置标签图标-->
+    <link href="img/favicon.png" rel="shortcut icon"/>
+
+    <!-- 全局js -->
+    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="js/plugins/layer/layer.min.js"></script>
+
+    <!-- 自定义js -->
+    <script src="js/hAdmin.js?v=4.1.0"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+
+    <!-- 第三方插件 -->
+    <script src="js/plugins/pace/pace.min.js"></script>
+
+    <!-- 自定义js -->
+    <script src="js/content.js?v=1.0.0"></script>
+
+    <!--文件上传css-->
+    <!-- CSS to style the file input field as button and adjust the Bootstrap progress bars -->
+    <link rel="stylesheet" href="css/jquery.fileupload.css">
+    <link rel="stylesheet" href="css/jquery.fileupload-ui.css">
+
+    <!-- IonRangeSlider -->
+    <link href="css/plugins/ionRangeSlider/ion.rangeSlider.css" rel="stylesheet">
+    <link href="css/plugins/ionRangeSlider/ion.rangeSlider.skinFlat.css" rel="stylesheet">
+    <script src="js/plugins/chosen/chosen.jquery.js"></script>
+    <script src="js/plugins/ionRangeSlider/ion.rangeSlider.min.js"></script>
+    <script src="js/demo/form-advanced-demo.js"></script>
+
+
+</head>
+<body class="gray-bg">
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-sm-4">
+        <h2>主题表示学习-<strong>关键字提取</strong></h2>
+        <ol class="breadcrumb">
+            <li>
+                <a href="index.html">主页</a>
+            </li>
+            <li>
+                <strong>关键字提取</strong>
+            </li>
+        </ol>
+    </div>
+    <div class="col-sm-8">
+        <div class="title-action">
+            <a href="main.html" class="btn btn-primary">打开主页</a>
+        </div>
+    </div>
+</div>
+
+<div class="wrapper wrapper-content animated fadeIn">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>文件上传</h5>
+                </div>
+                <div class="ibox-content">
+                    <div class="page-container">
+                        <form action="#">
+                            <!-- The fileupload-buttonbar contains buttons to add/delete files and start/cancel the upload -->
+                            <div class="row fileupload-buttonbar">
+                                <div class="col-lg-7">
+                                    <!-- The fileinput-button span is used to style the file input field as button -->
+                                    <span class="btn btn-success fileinput-button">
+                                    <i class="glyphicon glyphicon-plus"></i>
+                                    <span>Add files...</span>
+                                    <input type="file" name="files[]" multiple>
+                                </span>
+                                    <button type="submit" class="btn btn-primary start">
+                                        <i class="glyphicon glyphicon-upload"></i>
+                                        <span>Start upload</span>
+                                    </button>
+
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>输入数据</h5>
+                </div>
+                <div class="ibox-content">
+                    <div class="page-container">
+                        <!--tfidf-->
+                        <!--textrank-->
+                        <!--lda-->
+                        <textarea class="form-control" placeholder="输入文本数据......"
+                                  style="margin: 0px -2px 0px 0px;height: 150px;resize: none"></textarea>
+
+                        <div class="hr-line-dashed"></div>
+                        <h5>
+                            设置结果显示数目
+                        </h5>
+                        <div id="ionrange1"></div>
+                        <div class="hr-line-dashed"></div>
+                        <h5>
+                            设置实现算法
+                        </h5>
+                        <div class="form-group">
+                        	<div class="radio radio-success">
+
+                            <label>
+                                <input type="radio" checked value="tfidf" name="alogrithm"> <i></i> TF-IDF</label>
+                            <label>
+                                <input type="radio" disabled name="alogrithm" value="textrank"> <i></i>
+                                TextRank（禁用）</label>
+                            <label>
+                                <input type="radio" disabled name="alogrithm" value="lad"> <i></i> LDA（禁用）</label>
+                        </div>
+                        </div>
+                    </div>
+					<div class="hr-line-dashed"></div>
+                    <div class="radio radio-info radio-inline">
+		                        <input type="radio" id="inlineRadio1" value="option1" class="checkbox checkbox-success" name="radioInline" checked>
+		                        <label for="inlineRadio1"> Inline One </label>
+		                    </div>
+		                    <div class="radio radio-inline">
+		                        <input type="radio" id="inlineRadio2" value="option2" class="checkbox checkbox-success" name="radioInline">
+		                        <label for="inlineRadio2"> Inline Two </label>
+		                    </div>
+                    <div class="hr-line-dashed"></div>
+                    <a href="#" class="btn btn-primary pull-right">开始处理</a>
+                    <p>&nbsp;</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="ibox-content">
+    <div class="sk-spinner sk-spinner-circle">
+        <div class="sk-circle1 sk-circle"></div>
+        <div class="sk-circle2 sk-circle"></div>
+        <div class="sk-circle3 sk-circle"></div>
+        <div class="sk-circle4 sk-circle"></div>
+        <div class="sk-circle5 sk-circle"></div>
+        <div class="sk-circle6 sk-circle"></div>
+        <div class="sk-circle7 sk-circle"></div>
+        <div class="sk-circle8 sk-circle"></div>
+        <div class="sk-circle9 sk-circle"></div>
+        <div class="sk-circle10 sk-circle"></div>
+        <div class="sk-circle11 sk-circle"></div>
+        <div class="sk-circle12 sk-circle"></div>
+    </div>
+</div>
+
+<img src="img/loading.svg"/>
+
+<div class="row">
+    <div class="col-sm-12">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <h5>输出结果</h5>
+            </div>
+            <div class="ibox-content">
+                <div class="page-container">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-content">
+                            <table class="table table-bordered">
+                                <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>keyword</th>
+                                    <th>Value</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>张三</td>
+                                    <td>23</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>李四</td>
+                                    <td>27</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>王麻子</td>
+                                    <td>65</td>
+                                </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 全局js -->
+    <script src="js/jquery.min.js?v=2.1.4"></script>
+    <script src="js/bootstrap.min.js?v=3.3.6"></script>
+    <!-- 自定义js -->
+    <script src="js/content.js?v=1.0.0"></script>
+
+    <script src="js/plugins/chosen/chosen.jquery.js"></script>
+    <script src="js/plugins/ionRangeSlider/ion.rangeSlider.min.js"></script>
+    <script>
+        $("#ionrange1").ionRangeSlider({
+            min: 0,
+            max: 100,
+            from: 10,
+            prettify: false,
+            hasGrid: true
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title> - 百度ECHarts</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+
+    <link href="css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="css/font-awesome.min.css?v=4.4.0" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/build.css" rel="stylesheet">
+    <link href="css/style.css?v=4.1.0" rel="stylesheet">
+
+    <!--设置标签图标-->
+    <link href="img/favicon.png" rel="shortcut icon"/>
+
+    <!-- 全局js -->
+    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="js/plugins/layer/layer.min.js"></script>
+
+    <!-- 自定义js -->
+    <script src="js/hAdmin.js?v=4.1.0"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+
+    <!-- 第三方插件 -->
+    <script src="js/plugins/pace/pace.min.js"></script>
+
+    <!-- 自定义js -->
+    <script src="js/content.js?v=1.0.0"></script>
+
+    <!--文件上传css-->
+    <!-- CSS to style the file input field as button and adjust the Bootstrap progress bars -->
+    <link rel="stylesheet" href="css/jquery.fileupload.css">
+    <link rel="stylesheet" href="css/jquery.fileupload-ui.css">
+
+    <!-- IonRangeSlider -->
+    <link href="css/plugins/ionRangeSlider/ion.rangeSlider.css" rel="stylesheet">
+    <link href="css/plugins/ionRangeSlider/ion.rangeSlider.skinFlat.css" rel="stylesheet">
+    <script src="js/plugins/chosen/chosen.jquery.js"></script>
+    <script src="js/plugins/ionRangeSlider/ion.rangeSlider.min.js"></script>
+    <script src="js/demo/form-advanced-demo.js"></script>
+
+    <!-- ECharts -->
+    <script src="js/plugins/echarts/echarts-all.js"></script>
+
+</head>
+
+<body class="gray-bg">
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-sm-4">
+        <h2>信息抽取-<strong>文本分类</strong></h2>
+        <ol class="breadcrumb">
+            <li>
+                <a href="index.html">主页</a>
+            </li>
+            <li>
+                <strong>文本分类</strong>
+            </li>
+        </ol>
+    </div>
+    <div class="col-sm-8">
+        <div class="title-action">
+            <a href="main.html" class="btn btn-primary">打开主页</a>
+        </div>
+    </div>
+</div>
+
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="ibox-content m-b-sm border-bottom">
+        <div class="text-center p-lg">
+            <h1>训练阶段</h1>
+            <button title="Create new cluster" class="btn btn-primary btn-sm">
+                <i class="fa fa-download"></i>
+                <span>下载训练数据集</span>
+            </button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>训练说明</h5>
+                </div>
+                <div class="ibox-content">
+                    <div class="echarts" id="echarts-line-chart"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>训练说明</h5>
+                </div>
+                <div class="ibox-content">
+                    <div class="echarts" id="echarts-bar-chart"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>训练说明</h5>
+                </div>
+                <div class="ibox-content">
+                    <table class="footable table table-stripped toggle-arrow-tiny" data-page-size="8">
+                        <thead>
+                        <tr>
+                            <th data-toggle="true">数据集</th>
+                            <th>时间</th>
+                            <th data-hide="all">公司</th>
+                            <th data-hide="all">参数</th>
+                            <th data-hide="all">采购数量</th>
+                            <th data-hide="all">日期</th>
+                            <th>操作</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>2015韩国童装韩版牛仔童短裤</td>
+                            <td>0800 051213</td>
+                            <td>深圳市有大福实业有限公司</td>
+                            <td><span class="pie">0.52/1.561</span></td>
+                            <td>200</td>
+                            <td>2015.09.10</td>
+                            <td><a href="#"><i class="fa fa-check text-navy"></i> 下载</a></td>
+                        </tr>
+                        <tr>
+                            <td>300米速进口日本原丝耐磨</td>
+                            <td>0500 780909</td>
+                            <td>广州重兑诺贸易有限公司</td>
+                            <td><span class="pie">6,9</span></td>
+                            <td>400</td>
+                            <td>2015.10.14</td>
+                            <td><a href="#"><i class="fa fa-check text-navy"></i> 下载</a></td>
+                        </tr>
+                        <tr>
+                            <td>正品印度红油</td>
+                            <td>0800 051213</td>
+                            <td>深圳市有大福实业有限公司</td>
+                            <td><span class="pie">0.52/1.561</span></td>
+                            <td>200</td>
+                            <td>2015.09.10</td>
+                            <td><a href="#"><i class="fa fa-check text-navy"></i> 下载</a></td>
+                        </tr>
+                        </tbody>
+                        <tfoot>
+                        <tr>
+                            <td colspan="5">
+                                <ul class="pagination pull-right"></ul>
+                            </td>
+                        </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>训练结果</h5>
+                </div>
+                <div class="ibox-content">
+
+                    <table class="footable table table-stripped toggle-arrow-tiny" data-page-size="8">
+                        <thead>
+                        <tr>
+                            <th data-toggle="true">数据集</th>
+                            <th>时间</th>
+                            <th data-hide="all">公司</th>
+                            <th data-hide="all">参数</th>
+                            <th data-hide="all">采购数量</th>
+                            <th data-hide="all">日期</th>
+                            <th>操作</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>2015韩国童装韩版牛仔童短裤</td>
+                            <td>0800 051213</td>
+                            <td>深圳市有大福实业有限公司</td>
+                            <td><span class="pie">0.52/1.561</span></td>
+                            <td>200</td>
+                            <td>2015.09.10</td>
+                            <td><a href="#"><i class="fa fa-check text-navy"></i> 下载</a></td>
+                        </tr>
+                        <tr>
+                            <td>300米速进口日本原丝耐磨</td>
+                            <td>0500 780909</td>
+                            <td>广州重兑诺贸易有限公司</td>
+                            <td><span class="pie">6,9</span></td>
+                            <td>400</td>
+                            <td>2015.10.14</td>
+                            <td><a href="#"><i class="fa fa-check text-navy"></i> 下载</a></td>
+                        </tr>
+                        <tr>
+                            <td>正品印度红油</td>
+                            <td>0800 051213</td>
+                            <td>深圳市有大福实业有限公司</td>
+                            <td><span class="pie">0.52/1.561</span></td>
+                            <td>200</td>
+                            <td>2015.09.10</td>
+                            <td><a href="#"><i class="fa fa-check text-navy"></i> 下载</a></td>
+                        </tr>
+                        </tbody>
+                        <tfoot>
+                        <tr>
+                            <td colspan="5">
+                                <ul class="pagination pull-right"></ul>
+                            </td>
+                        </tr>
+                        </tfoot>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="ibox-content m-b-sm border-bottom">
+        <div class="text-center p-lg">
+            <h1>测试阶段</h1>
+            <span><strong>第一步：</strong>上传文本测试数据或输入文本数据<strong><i
+                    class="fa fa-arrow-right"></i>第二步：</strong>选择语种类型<strong><i
+                    class="fa fa-arrow-right"></i>第三步：</strong>选择实现算法<strong><i
+                    class="fa fa-arrow-right"></i>第四步：</strong>处理</span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>文件上传</h5>
+                </div>
+                <div class="ibox-content">
+                    <div class="page-container">
+                        <form action="#">
+                            <!-- The fileupload-buttonbar contains buttons to add/delete files and start/cancel the upload -->
+                            <div class="row fileupload-buttonbar">
+                                <div class="col-lg-7">
+                                    <button type="submit" class="btn btn-primary start">
+                                        <i class="glyphicon glyphicon-upload"></i>
+                                        <span>Start upload</span>
+                                    </button>
+
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>输入数据</h5>
+                </div>
+                <div class="ibox-content">
+                    <div class="page-container">
+                        <!--tfidf-->
+                        <!--textrank-->
+                        <!--lda-->
+                        <textarea class="form-control" placeholder="输入文本数据......"
+                                  style="margin: 0px -2px 0px 0px;height: 150px;resize: none"></textarea>
+
+                        <div class="hr-line-dashed"></div>
+                        <h5>
+                            设置结果显示数目
+                        </h5>
+                        <div id="ionrange1"></div>
+                        <div class="hr-line-dashed"></div>
+                        <h5>
+                            设置实现算法
+                        </h5>
+                        <div class="form-group">
+                            <div class="radio radio-success">
+
+                                <label>
+                                    <input type="radio" checked value="tfidf" name="alogrithm"> <i></i> TF-IDF</label>
+                                <label>
+                                    <input type="radio" disabled name="alogrithm" value="textrank"> <i></i>
+                                    TextRank（禁用）</label>
+                                <label>
+                                    <input type="radio" disabled name="alogrithm" value="lad"> <i></i> LDA（禁用）</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hr-line-dashed"></div>
+                    <div class="radio radio-info radio-inline">
+                        <input type="radio" id="inlineRadio1" value="option1" class="checkbox checkbox-success"
+                               name="radioInline" checked>
+                        <label for="inlineRadio1"> Inline One </label>
+                    </div>
+                    <div class="radio radio-inline">
+                        <input type="radio" id="inlineRadio2" value="option2" class="checkbox checkbox-success"
+                               name="radioInline">
+                        <label for="inlineRadio2"> Inline Two </label>
+                    </div>
+                    <div class="hr-line-dashed"></div>
+                    <a href="#" class="btn btn-primary pull-right">开始处理</a>
+                    <p>&nbsp;</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <img src="img/loading.svg"/>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>输出结果</h5>
+                </div>
+                <div class="ibox-content">
+                    <div class="page-container">
+                        <div class="ibox float-e-margins">
+                            <div class="ibox-content">
+                                <table class="table table-bordered">
+                                    <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>keyword</th>
+                                        <th>Value</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>张三</td>
+                                        <td>23</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>李四</td>
+                                        <td>27</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>王麻子</td>
+                                        <td>65</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- 全局js -->
+<script src="js/jquery.min.js?v=2.1.4"></script>
+<script src="js/bootstrap.min.js?v=3.3.6"></script>
+<!-- 自定义js -->
+<script src="js/content.js?v=1.0.0"></script>
+
+<script src="js/plugins/chosen/chosen.jquery.js"></script>
+<script src="js/plugins/ionRangeSlider/ion.rangeSlider.min.js"></script>
+<script>
+    $("#ionrange1").ionRangeSlider({
+        min: 0,
+        max: 100,
+        from: 10,
+        prettify: false,
+        hasGrid: true
+    });
+</script>
+
+
+<!--数据下载-->
+<script src="js/plugins/footable/footable.all.min.js"></script>
+
+<!-- 自定义js -->
+<script src="js/content.js?v=1.0.0"></script>
+<script>
+    $(document).ready(function () {
+
+        $('.footable').footable();
+        $('.footable2').footable();
+
+    });
+</script>
+<!--Echarts-->
+<script>
+    $(function () {
+        var lineChart = echarts.init(document.getElementById("echarts-line-chart"));
+        var lineoption = {
+            title: {
+                text: '未来一周气温变化'
+            },
+            tooltip: {
+                trigger: 'axis'
+            },
+            legend: {
+                data: ['最高气温', '最低气温']
+            },
+            grid: {
+                x: 40,
+                x2: 40,
+                y2: 24
+            },
+            calculable: true,
+            xAxis: [
+                {
+                    type: 'category',
+                    boundaryGap: false,
+                    data: ['周一', '周二', '周三', '周四', '周五', '周六', '周日']
+                }
+            ],
+            yAxis: [
+                {
+                    type: 'value',
+                    axisLabel: {
+                        formatter: '{value} °C'
+                    }
+                }
+            ],
+            series: [
+                {
+                    name: '最高气温',
+                    type: 'line',
+                    data: [11, 11, 15, 13, 12, 13, 10],
+                    markPoint: {
+                        data: [
+                            {type: 'max', name: '最大值'},
+                            {type: 'min', name: '最小值'}
+                        ]
+                    },
+                    markLine: {
+                        data: [
+                            {type: 'average', name: '平均值'}
+                        ]
+                    }
+                },
+                {
+                    name: '最低气温',
+                    type: 'line',
+                    data: [1, -2, 2, 5, 3, 2, 0],
+                    markPoint: {
+                        data: [
+                            {name: '周最低', value: -2, xAxis: 1, yAxis: -1.5}
+                        ]
+                    },
+                    markLine: {
+                        data: [
+                            {type: 'average', name: '平均值'}
+                        ]
+                    }
+                }
+            ]
+        };
+        lineChart.setOption(lineoption);
+        $(window).resize(lineChart.resize);
+
+        var barChart = echarts.init(document.getElementById("echarts-bar-chart"));
+        var baroption = {
+            title: {
+                text: '某地区蒸发量和降水量'
+            },
+            tooltip: {
+                trigger: 'axis'
+            },
+            legend: {
+                data: ['蒸发量', '降水量']
+            },
+            grid: {
+                x: 30,
+                x2: 40,
+                y2: 24
+            },
+            calculable: true,
+            xAxis: [
+                {
+                    type: 'category',
+                    data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月']
+                }
+            ],
+            yAxis: [
+                {
+                    type: 'value'
+                }
+            ],
+            series: [
+                {
+                    name: '蒸发量',
+                    type: 'bar',
+                    data: [2.0, 4.9, 7.0, 23.2, 25.6, 76.7, 135.6, 162.2, 32.6, 20.0, 6.4, 3.3],
+                    markPoint: {
+                        data: [
+                            {type: 'max', name: '最大值'},
+                            {type: 'min', name: '最小值'}
+                        ]
+                    },
+                    markLine: {
+                        data: [
+                            {type: 'average', name: '平均值'}
+                        ]
+                    }
+                },
+                {
+                    name: '降水量',
+                    type: 'bar',
+                    data: [2.6, 5.9, 9.0, 26.4, 28.7, 70.7, 175.6, 182.2, 48.7, 18.8, 6.0, 2.3],
+                    markPoint: {
+                        data: [
+                            {name: '年最高', value: 182.2, xAxis: 7, yAxis: 183, symbolSize: 18},
+                            {name: '年最低', value: 2.3, xAxis: 11, yAxis: 3}
+                        ]
+                    },
+                    markLine: {
+                        data: [
+                            {type: 'average', name: '平均值'}
+                        ]
+                    }
+                }
+            ]
+        };
+        barChart.setOption(baroption);
+
+        window.onresize = barChart.resize;
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g><rect x="0" y="0" fill="#1B2543" width="211.2" height="130.1"/>
+	<rect x="0" y="112.2" fill="#E63912" width="211.2" height="17.9"/>
+	<g><rect x="1.2" y="12.3" fill="none" width="210.2" height="99.2"/>
+    <defs>
+    <path id="path1" d="M25,50 h200" />
+	<path id="path2" d="M68,93 h200" />
+    </defs>
+    <text x="10" y="100" style="fill:#FFFFFF;font-size: 45px;">
+    <textPath xlink:href="#path1">Z U E L</textPath>
+	<textPath xlink:href="#path2">M L</textPath>
+    </text>
+	</g>
+	</g>
+</svg>
