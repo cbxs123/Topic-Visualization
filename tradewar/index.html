@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit">
+
+    <title>中南财经政法大学观点挖掘平台</title>
+
+    <!--[if lt IE 9]>
+    <meta http-equiv="refresh" content="0;ie.html"/>
+    <![endif]-->
+
+    <link href="css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="css/font-awesome.min.css?v=4.4.0" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css?v=4.1.0" rel="stylesheet">
+
+    <!--设置标签图标-->
+    <link href="img/favicon.png" rel="shortcut icon"/>
+
+    <!-- 全局js -->
+    <script src="js/jquery.min.js?v=2.1.4"></script>
+    <script src="js/bootstrap.min.js?v=3.3.6"></script>
+
+    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="js/plugins/layer/layer.min.js"></script>
+
+    <!-- 自定义js -->
+    <script src="js/hAdmin.js?v=4.1.0"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+
+    <!-- 第三方插件 -->
+    <script src="js/plugins/pace/pace.min.js"></script>
+
+</head>
+
+<body class="fixed-sidebar full-height-layout gray-bg" style="overflow:hidden">
+<div id="wrapper">
+    <!--左侧导航开始-->
+    <nav class="navbar-default navbar-static-side" role="navigation">
+        <div class="nav-close"><i class="fa fa-times-circle"></i>
+        </div>
+        <div class="sidebar-collapse">
+            <ul class="nav" id="side-menu">
+                <li class="nav-header">
+                    <div class="dropdown profile-element">
+                        <!--回首页-->
+                        <a href="index.html">
+                        <span class="clear">
+                            <span class="block m-t-xs" style="font-size:20px;">
+                                        <img src="trend/tradewar.jpg" style="width: 35px;height: 35px;">
+                                        <strong class="font-bold"> 中美贸易战</strong>
+                            </span>
+                        </span>
+                        </a>
+                    </div>
+                    <!--回首页-->
+                    <div class="logo-element"><a href="index.html">ZUEL </a></div>
+
+                </li>
+                <!-- <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">
+                     <span class="ng-scope">系统</span>
+                 </li>
+                 <li>
+                     <a class="J_menuItem" href="main.html">
+                         <i class="fa fa-home"></i>
+                         <span class="nav-label">主页</span>
+                     </a>
+                 </li>-->
+                <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">
+                    <span class="ng-scope">主题表示学习</span>
+                </li>
+                <li>
+                    <a class="J_menuItem" href="main.html">
+                        <i class="glyphicon glyphicon-magnet"></i>
+                        <span class="nav-label">词向量学习</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="J_menuItem" >
+                        <i class="glyphicon glyphicon-magnet"></i>
+                        <span class="nav-label">主题分布</span>
+                    </a>
+		    <ul class="nav nav-second-level">
+                        <li><a class="J_menuItem" href="./trend/trendcn.html">中文</a>
+                        </li>
+                        <li><a class="J_menuItem" href="./trend/trenden.html">英文</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="J_menuItem" href="">
+                        <i class="glyphicon glyphicon-magnet"></i>
+                        <span class="nav-label">主题演化</span>
+                    </a>
+		    <ul class="nav nav-second-level">
+                        <li><a class="J_menuItem" href="./trend/Topic-evolution_cn.html">中文</a>
+                        </li>
+                        <li><a class="J_menuItem" href="./trend/Topic-evolution_en.html">英文</a>
+                        </li>
+                    </ul>
+
+                </li>
+                <li class="line dk"></li>
+                <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">
+                    <span class="ng-scope">双语主题对齐</span>
+                </li>
+                <li>
+                    <a class="J_menuItem" href="main.html">
+                        <i class="glyphicon glyphicon-book"></i>
+                        <span class="nav-label">双语词向量学习</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="J_menuItem" href="main.html">
+                        <i class="glyphicon glyphicon-book"></i>
+                        <span class="nav-label">双语主题相似性</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="J_menuItem" href="main.html">
+                        <i class="glyphicon glyphicon-book"></i>
+                        <span class="nav-label">双语主题一致性</span>
+                    </a>
+                </li>
+                <li class="line dk"></li>
+                <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">
+                    <span class="ng-scope">常用链接</span>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="glyphicon-download"></i>
+                        <span class="nav-label">数据集</span>
+                        <span class="fa arrow"></span>
+                    </a>
+                    <ul class="nav nav-second-level">
+                        <li><a class="J_menuItem" href="main.html">brexit</a>
+                        </li>
+                        <li><a class="J_menuItem" href="main.html">unclear</a>
+                        </li>
+                        <li><a class="J_menuItem" href="main.html">road</a>
+                        </li>
+                        <li><a class="J_menuItem" href="main.html">tradewar</a>
+                        </li>
+                    </ul>
+				<li>
+				<li>
+					<a href="#">
+                        <i class="glyphicon-download"></i>
+                        <span class="nav-label">评估指标</span>
+                        <span class="fa arrow"></span>
+                    </a>
+                    <ul class="nav nav-second-level">
+                        <li><a href="http://palmetto.aksw.org/palmetto-webapp/" target="_blank">主题相关度</a>
+                        </li>
+                        <li><a href="https://github.com/cjymz886/sentence-similarity" target="_blank">文本相似度</a>
+                        </li>
+                    </ul>
+				<li>
+				<li>
+					<a href="#">
+                        <i class="glyphicon-download"></i>
+                        <span class="nav-label">语言模型</span>
+                        <span class="fa arrow"></span>
+                    </a>
+                    <ul class="nav nav-second-level">
+                        <li><a class="J_menuItem" href="https://radimrehurek.com/gensim/models/ldamodel.html">lda</a>
+                        </li>
+                        <li><a class="J_menuItem" href="https://radimrehurek.com/gensim/models/word2vec.html">word2vec</a>
+                        </li>
+                        <li><a class="J_menuItem" href="https://fasttext.cc/">fasttext</a>
+                        </li>
+                        <li><a class="J_menuItem" href="https://radimrehurek.com/gensim/models/doc2vec.html">doc2vec</a>
+                        </li>
+                        <li><a href="https://github.com/artetxem/vecmap" target="_blank">vecmap</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!--左侧导航结束-->
+    <!--右侧部分开始-->
+    <div id="page-wrapper" class="gray-bg dashbard-1">
+        <div class="row border-bottom">
+            <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+                <div class="navbar-header"><a class="navbar-minimalize minimalize-styl-2 btn btn-info " href="#"><i
+                        class="fa fa-bars"></i> </a>
+                </div>
+                <ul class="nav navbar-top-links navbar-right">
+                    <li>
+                        <form role="search" class="navbar-form-custom" method="post" action="search_results.html">
+                            <div class="form-group">
+                                <input type="text" placeholder="请输入您需要查找的内容 …" class="form-control" name="top-search"
+                                       id="top-search">
+                            </div>
+                        </form>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <!--默认首页-->
+        <div class="row J_mainContent" id="content-main">
+            <iframe id="J_iframe" width="100%" height="100%" src="main.html" frameborder="0"
+                    data-id="index_v1.html" seamless></iframe>
+        </div>
+    </div>
+    <!--右侧部分结束-->
+</div>
+
+</body>
+
+</html>
