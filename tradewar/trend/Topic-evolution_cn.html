@@ -60,7 +60,7 @@
         var figure = document.getElementsByTagName("figure")[0];
         try {
             window.App = {};
-            window.Global = { rootUrl: '/trend' };
+            window.Global = { rootUrl: '/tradewar/trend' };
             ChartView.bootstrap({ jsonConfig: jsonConfig, containerNode: figure })
         } catch (err) {
             figure.innerHTML = "<img src=\"./exports/fruit.svg\"/><p>Unable to load interactive visualization</p>";
