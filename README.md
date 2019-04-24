@@ -12,19 +12,19 @@
 
 - 图0-[双语新闻数据集](https://github.com/cbxs123/news-comment-spider/tree/master/0-data/双语新闻集)
 
-<img src="./img/0.png" style="zoom:75%" align=center />
+<img src="./img/0.png" style="zoom:60%" align=center />
 
 - 图1
 
-<img src="./img/1.png" style="zoom:75%" align=center />
+<img src="./img/1.png" style="zoom:60%" align=center />
 
 - 图2
 
-<img src="./img/2.png" style="zoom:75%" align=center />
+<img src="./img/2.png" style="zoom:60%" align=center />
 
 - 图3
 
-<img src="./img/3.png" style="zoom:75%" align=center />
+<img src="./img/3.png" style="zoom:60%" align=center />
 
 
 可视化平台基于[jasonhavenD](https://github.com/jasonhavenD/DJH-NLPIE)开源的框架，以“中美贸易战”中英双语新闻集为语料，使用[LDA2Vec(pytorch版)](https://github.com/TropComplique/lda2vec-pytorch)进行主题表示的观点信息可视化展示（图4和图5为主题-词分布情况，图6和图7为主题演化情况），主题对齐尚在开发中。
@@ -32,20 +32,20 @@
 
 - 图4-中文27号主题（美国商会态度）的主题-词分布情况
 
-<img src="./img/4.png" style="zoom:75%" align=center />
+<img src="./img/4.png" style="zoom:60%" align=center />
 
 
 - 图5-英文27号主题（Military）的主题-词分布情况
 
-<img src="./img/5.png" style="zoom:75%" align=center />
+<img src="./img/5.png" style="zoom:60%" align=center />
 
 
 - 图6-中文其中两个主题的演化情况
 
-<img src="./img/6.png" style="zoom:75%" align=center />
+<img src="./img/6.png" style="zoom:60%" align=center />
 
 
 - 图7-英文其中两个主题的演化情况
 
-<img src="./img/7.png" style="zoom:75%" align=center />
+<img src="./img/7.png" style="zoom:60%" align=center />
 
