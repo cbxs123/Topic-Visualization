@@ -1,6 +1,6 @@
 # Topic-Visualization
 
->  **基于主题表示和对齐的观点挖掘平台  https://zuel.ml**
+>  **基于主题表示和对齐的观点挖掘平台  https://zuel1.ml**  声明：zuel.ml免费域名于2019.11.23到期，改用新免费域名zuel1.ml。对域名商重定向zuel.ml域名很无语。
 
 ### 背景
 
@@ -48,4 +48,5 @@
 - 图7-英文其中两个主题的演化情况
 
 <img src="./img/7.png" style="zoom:60%" align=center />
+
 
